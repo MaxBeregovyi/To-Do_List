@@ -76,6 +76,7 @@ class ListItem {
 
     console.log(listArray);
     localStorage.setItem("list", JSON.stringify(listArray));
+    location.reload();
   }
 
   renderItem() {
@@ -121,7 +122,11 @@ class ListItem {
     newSection.appendChild(
       this.createBtn("list-item__important", "star", this.markAsImportant)
     );
-    List.appendChild(newSection);
+    if (this.isImportant) {
+      List.prepend(newSection);
+    } else {
+      List.appendChild(newSection);
+    }
   }
 
   doneItem(target) {
