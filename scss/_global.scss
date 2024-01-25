@@ -15,15 +15,17 @@ img {
   width: 100%;
 }
 
-button, input, a {
+button,
+input,
+a {
   transition: .5s;
 }
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
 }
 
 .wrapper {
@@ -32,6 +34,7 @@ button, input, a {
   @media screen and (max-width: 768px) {
     padding: 0 calc(50vw - 200px);
   }
+
   @media screen and (max-width: 405px) {
     padding: 0 calc(50vw - 170px);
   }
@@ -45,10 +48,10 @@ button, input, a {
 
   &__text {
     background-clip: text;
-    background-image: var(--gradient);
+    background-image: var(--gradientMy);
     color: transparent;
     background-size: 125%;
-    animation: floating-gradient 2.5s infinite alternate;
+    animation: floating-gradient 2s infinite alternate;
   }
 }
 
