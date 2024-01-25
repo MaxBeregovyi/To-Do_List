@@ -3,6 +3,22 @@ let counter = 0;
 const createForm = document.forms.createForm;
 const List = document.querySelector(".list");
 let editIndex = -1;
+const filterCheckbox = document.getElementById("filterCheckbox");
+filterCheckbox.addEventListener("change", function () {
+  const listItems = document.querySelectorAll(".list-item");
+
+  listItems.forEach((item) => {
+    const isImportant = item.classList.contains("--important");
+
+    if (filterCheckbox.checked) {
+      if (!isImportant) {
+        item.style.display = "none";
+      }
+    } else {
+      location.reload();
+    }
+  });
+});
 
 /* modules/ListItem.js */
 class ListItem {
@@ -122,11 +138,12 @@ class ListItem {
     newSection.appendChild(
       this.createBtn("list-item__important", "star", this.markAsImportant)
     );
-    if (this.isImportant) {
-      List.prepend(newSection);
-    } else {
-      List.appendChild(newSection);
-    }
+    // if (this.isImportant) {
+    //   List.prepend(newSection);
+    // } else {
+    //   List.appendChild(newSection);
+    // }
+    List.prepend(newSection);
   }
 
   doneItem(target) {
