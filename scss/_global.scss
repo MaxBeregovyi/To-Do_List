@@ -5,9 +5,19 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--accent);
   color: var(--text-color);
   font-family: 'Roboto', sans-serif;
+}
+
+.app-wrapper {
+  margin: 30px 120px;
+  border: 3px solid #C850C0;
+  border-radius: 30px;
+  background: blanchedalmond;
+  box-shadow: 0px 0px 9px 5px rgba(200, 80, 192, 0.7);
+
+
 }
 
 img {
@@ -23,9 +33,9 @@ a {
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 .wrapper {

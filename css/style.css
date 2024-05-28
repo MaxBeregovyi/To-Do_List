@@ -111,9 +111,17 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--accent);
   color: var(--text-color);
   font-family: "Roboto", sans-serif;
+}
+
+.app-wrapper {
+  margin: 30px 120px;
+  border: 3px solid #C850C0;
+  border-radius: 30px;
+  background: blanchedalmond;
+  box-shadow: 0px 0px 9px 5px rgba(200, 80, 192, 0.7);
 }
 
 img {
@@ -365,9 +373,9 @@ a {
 
 .filters {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
   margin-bottom: 25px;
 }
 
